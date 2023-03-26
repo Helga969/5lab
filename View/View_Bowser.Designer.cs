@@ -69,6 +69,7 @@ namespace _5lab.View
             this.label7 = new System.Windows.Forms.Label();
             this.dgvAutobase = new System.Windows.Forms.DataGridView();
             this.ViewStatement = new System.Windows.Forms.TabPage();
+            this.Txt_date = new System.Windows.Forms.MaskedTextBox();
             this.DelStatement = new System.Windows.Forms.Button();
             this.ChStatement = new System.Windows.Forms.Button();
             this.AddStatement = new System.Windows.Forms.Button();
@@ -88,7 +89,6 @@ namespace _5lab.View
             this.Txt_id_stat = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvStatement = new System.Windows.Forms.DataGridView();
-            this.Txt_date = new System.Windows.Forms.MaskedTextBox();
             this.App_tab.SuspendLayout();
             this.ViewAuto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuto)).BeginInit();
@@ -185,6 +185,7 @@ namespace _5lab.View
             this.Txt_id_auto.Name = "Txt_id_auto";
             this.Txt_id_auto.Size = new System.Drawing.Size(168, 20);
             this.Txt_id_auto.TabIndex = 2;
+            this.Txt_id_auto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_auto_KeyPress);
             // 
             // label1
             // 
@@ -273,6 +274,7 @@ namespace _5lab.View
             this.Txt_id_driver.Name = "Txt_id_driver";
             this.Txt_id_driver.Size = new System.Drawing.Size(168, 20);
             this.Txt_id_driver.TabIndex = 2;
+            this.Txt_id_driver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_auto_KeyPress);
             // 
             // label3
             // 
@@ -361,6 +363,7 @@ namespace _5lab.View
             this.Txt_id_garage.Name = "Txt_id_garage";
             this.Txt_id_garage.Size = new System.Drawing.Size(203, 20);
             this.Txt_id_garage.TabIndex = 2;
+            this.Txt_id_garage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_auto_KeyPress);
             // 
             // label5
             // 
@@ -448,6 +451,7 @@ namespace _5lab.View
             this.Txt_id_autobase.Name = "Txt_id_autobase";
             this.Txt_id_autobase.Size = new System.Drawing.Size(206, 20);
             this.Txt_id_autobase.TabIndex = 2;
+            this.Txt_id_autobase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_auto_KeyPress);
             // 
             // label7
             // 
@@ -494,6 +498,14 @@ namespace _5lab.View
             this.ViewStatement.TabIndex = 4;
             this.ViewStatement.Text = "ViewStatement";
             this.ViewStatement.UseVisualStyleBackColor = true;
+            // 
+            // Txt_date
+            // 
+            this.Txt_date.Location = new System.Drawing.Point(557, 72);
+            this.Txt_date.Mask = "0000/00/00";
+            this.Txt_date.Name = "Txt_date";
+            this.Txt_date.Size = new System.Drawing.Size(196, 20);
+            this.Txt_date.TabIndex = 22;
             // 
             // DelStatement
             // 
@@ -649,6 +661,7 @@ namespace _5lab.View
             this.Txt_id_stat.Name = "Txt_id_stat";
             this.Txt_id_stat.Size = new System.Drawing.Size(196, 20);
             this.Txt_id_stat.TabIndex = 2;
+            this.Txt_id_stat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_id_auto_KeyPress);
             // 
             // label9
             // 
@@ -666,14 +679,6 @@ namespace _5lab.View
             this.dgvStatement.Name = "dgvStatement";
             this.dgvStatement.Size = new System.Drawing.Size(544, 392);
             this.dgvStatement.TabIndex = 0;
-            // 
-            // Txt_date
-            // 
-            this.Txt_date.Location = new System.Drawing.Point(557, 72);
-            this.Txt_date.Mask = "0000/00/00";
-            this.Txt_date.Name = "Txt_date";
-            this.Txt_date.Size = new System.Drawing.Size(196, 20);
-            this.Txt_date.TabIndex = 22;
             // 
             // View_Bowser
             // 

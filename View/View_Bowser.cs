@@ -263,5 +263,14 @@ namespace _5lab.View
         public int autoba { get => Convert.ToInt32(this.Txt_autobase.Text); set => this.Txt_autobase.Text = value.ToString(); }
         public int garage { get => Convert.ToInt32(this.Txt_garage.Text); set => this.Txt_garage.Text = value.ToString(); }
         public int auto { get => Convert.ToInt32(this.Txt_Auto.Text); set => this.Txt_Auto.Text = value.ToString(); }
+
+        private void Txt_id_auto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(Convert.ToChar(number)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
