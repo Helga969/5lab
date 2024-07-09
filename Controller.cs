@@ -14,12 +14,12 @@ namespace _5lab
         {
             v_auth = viewAutor;
         }
-        public void btnAuthorization_Click()
+        public async Task btnAuthorization_Click()
         {
             Model.Users us = new Model.Users();
             us.Login = v_auth.login;
             us.Password = v_auth.pass;
-            DataBase.auth(us);
+            await DataBase.auth(us);
         }
         //форма администратора
         View.ViewUsers v_users;
@@ -27,26 +27,26 @@ namespace _5lab
         {
             v_users = viewUsers;
         }
-        public void AddUsers_Click()
+        public async Task AddUsers_Click()
         {
             Model.Users usr = new Model.Users();
             usr.Login = v_users.Login;
             usr.Password = v_users.Passw;
-            DataBase.AddUsers(usr);
+            await DataBase.AddUsers(usr);
         }
-        public void DelUsers_Click()
+        public async Task DelUsers_Click()
         {
             Model.Users usr = new Model.Users();
             usr.IdUsers = v_users.idUSR;
-            DataBase.DelUsers(usr);
+            await DataBase.DelUsers(usr);
         }
-        public void ChUsers_Click()
+        public async Task ChUsers_Click()
         {
             Model.Users usr = new Model.Users();
             usr.Login = v_users.Login;
             usr.IdUsers = v_users.idUSR;
             usr.Password = v_users.Passw;
-            DataBase.ChUsers(usr);
+            await DataBase.ChUsers(usr);
         }
         //форма заправщика
         View.View_Bowser v_bowser;
@@ -54,95 +54,95 @@ namespace _5lab
         {
             v_bowser = view_Bowser;
         }
-        public void AddAuto_Click()
+        public async Task AddAuto_Click()
         {
             Model.Auto au = new Model.Auto();
             au.Number = v_bowser.Num;
-            DataBase.AddAuto(au);
+            await DataBase.AddAuto(au);
         }
         
-        public void ChAuto_Click()
+        public async Task ChAuto_Click()
         {
             Model.Auto au = new Model.Auto();
             au.IdAuto = v_bowser.idAu;
             au.Number = v_bowser.Num;
-            DataBase.ChAuto(au);
+            await DataBase.ChAuto(au);
         }
 
-        public void DelAuto_Click()
+        public async Task DelAuto_Click()
         {
             Model.Auto au = new Model.Auto();
             au.IdAuto = v_bowser.idAu;
-            DataBase.DelAuto(au);
+            await DataBase.DelAuto(au);
         }
 
-        public void AddDriver_Click()
+        public async Task AddDriver_Click()
         {
             Model.Driver dr = new Model.Driver();
             dr.FIO = v_bowser.fio;
-            DataBase.AddDriver(dr);
+            await DataBase.AddDriver(dr);
         }
 
-        public void ChDriver_Click()
+        public async Task ChDriver_Click()
         {
             Model.Driver dr = new Model.Driver();
             dr.FIO = v_bowser.fio;
             dr.IdDriver = v_bowser.idDr;
-            DataBase.ChDriver(dr);
+            await DataBase.ChDriver(dr);
         }
 
-        public void DelDriver_Click()
+        public async Task DelDriver_Click()
         {
             Model.Driver dr = new Model.Driver();
             dr.IdDriver = v_bowser.idDr;
-            DataBase.DelDriver(dr);
+            await DataBase.DelDriver(dr);
         }
 
-        public void AddGarage_Click()
+        public async Task AddGarage_Click()
         {
             Model.Garage gr = new Model.Garage();
             gr.Address = v_bowser.Addr;
-            DataBase.AddGarage(gr);
+            await DataBase.AddGarage(gr);
         }
 
-        public void ChGarage_Click()
+        public async Task ChGarage_Click()
         {
             Model.Garage gr = new Model.Garage();
             gr.Address = v_bowser.Addr;
             gr.IdGarage = v_bowser.idGr;
-            DataBase.ChGarage(gr);
+            await DataBase.ChGarage(gr);
         }
 
-        public void DelGarage_Click()
+        public async Task DelGarage_Click()
         {
             Model.Garage gr = new Model.Garage();
             gr.IdGarage = v_bowser.idGr;
-            DataBase.DelGarage(gr);
+            await DataBase.DelGarage(gr);
         }
 
-        public void AddAutobase_Click()
+        public async Task AddAutobase_Click()
         {
             Model.Autobase ab = new Model.Autobase();
             ab.Name = v_bowser.nm;
-            DataBase.AddAutobase(ab);
+            await DataBase.AddAutobase(ab);
         }
 
-        public void ChAutobase_Click()
+        public async Task ChAutobase_Click()
         {
             Model.Autobase ab = new Model.Autobase();
             ab.Name = v_bowser.nm;
             ab.IdAutobase = v_bowser.idaubs;
-            DataBase.ChAutobase(ab);
+            await DataBase.ChAutobase(ab);
         }
 
-        public void DelAutobase_Click()
+        public async Task DelAutobase_Click()
         {
             Model.Autobase ab = new Model.Autobase();
             ab.IdAutobase = v_bowser.idaubs;
-            DataBase.DelAutobase(ab);
+            await DataBase.DelAutobase(ab);
         }
 
-        public void AddStatement_Click()
+        public async Task AddStatement_Click()
         {
             Model.Statement st = new Model.Statement();
             st.Date = v_bowser.Date;
@@ -152,10 +152,10 @@ namespace _5lab
             st.Autobase = v_bowser.autoba;
             st.Garage = v_bowser.garage;
             st.Auto = v_bowser.auto;
-            DataBase.AddStatement(st);
+            await DataBase.AddStatement(st);
         }
 
-        public void ChStatement_Click()
+        public async Task ChStatement_Click()
         {
             Model.Statement st = new Model.Statement();
             st.IdStatement = v_bowser.idSt;
@@ -166,14 +166,14 @@ namespace _5lab
             st.Autobase = v_bowser.autoba;
             st.Garage = v_bowser.garage;
             st.Auto = v_bowser.auto;
-            DataBase.ChStatement(st);
+            await DataBase.ChStatement(st);
         }
 
-        public void DelStatement_Click()
+        public async Task DelStatement_Click()
         {
             Model.Statement st = new Model.Statement();
             st.IdStatement = v_bowser.idSt;
-            DataBase.DelStatement(st);
+            await DataBase.DelStatement(st);
         }
     }
 }
